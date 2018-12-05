@@ -3,7 +3,8 @@ a read write lock, which can be used in multiprocess envirment
 # 多进程下读写锁
 ## 使用方法
 在主进程中创建读写锁， 作为参数传入到子进程中。
-···
+
+```
 def f(name, lock):
     # lock.writer_lock.acquire()
     lock.reader_lock.acquire()
@@ -39,4 +40,4 @@ if __name__ == '__main__':
     a2.start()
     a1.join()
     a2.join()
-    ···
+```
